@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Brander_CheckoutCart>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Brander_Base/>
+            </depends>
+        </Brander_CheckoutCart>
+    </modules>
+</config>

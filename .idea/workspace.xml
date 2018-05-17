@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79500080-5376-4eba-833a-fc24062a6ebd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ConfigurableTableByAttributes_V1/app/design/frontend/base/default/template/catalog/product/view/type/options/configurable.phtml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/view/type/options/configurable.phtml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/code/local/Brander/CheckoutCart/controllers/CartController.php" afterPath="$PROJECT_DIR$/ConfigurableTableByAttributes_V1/app/code/local/Brander/CheckoutCart/controllers/CartController.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/code/local/Brander/CheckoutCart/controllers/CartController.php1" afterPath="$PROJECT_DIR$/ConfigurableTableByAttributes_V1/app/code/local/Brander/CheckoutCart/controllers/CartController.php1" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/code/local/Brander/CheckoutCart/etc/config.xml" afterPath="$PROJECT_DIR$/ConfigurableTableByAttributes_V1/app/code/local/Brander/CheckoutCart/etc/config.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/design/frontend/base/default/template/catalog/product/view/addtocart.phtml" afterPath="$PROJECT_DIR$/ConfigurableTableByAttributes_V1/app/design/frontend/base/default/template/catalog/product/view/addtocart.phtml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/etc/modules/Brander_CheckoutCart.xml" afterPath="$PROJECT_DIR$/ConfigurableTableByAttributes_V1/app/etc/modules/Brander_CheckoutCart.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/skin/frontend/base/default/js/brander/productTable.js" afterPath="$PROJECT_DIR$/ConfigurableTableByAttributes_V1/skin/frontend/base/default/js/brander/productTable.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ConfigurableTableByAttributes_V2/app/code/local/Brander/CheckoutCart/controllers/CartController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ConfigurableTableByAttributes_V2/app/code/local/Brander/CheckoutCart/controllers/CartController.php1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ConfigurableTableByAttributes_V2/app/code/local/Brander/CheckoutCart/etc/config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ConfigurableTableByAttributes_V2/app/design/frontend/base/default/template/catalog/product/view/addtocart.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ConfigurableTableByAttributes_V2/app/design/frontend/base/default/template/catalog/product/view/type/options/configurable.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ConfigurableTableByAttributes_V2/app/etc/modules/Brander_CheckoutCart.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ConfigurableTableByAttributes_V2/skin/frontend/base/default/js/brander/productTable.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -100,7 +98,81 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ConfigurableTableByAttributes_V1" />
+              <option name="myItemId" value="ConfigurableTableByAttributes_V2" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="brander" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magento_snippets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magento_snippets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ConfigurableTableByAttributes_V2" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magento_snippets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magento_snippets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ConfigurableTableByAttributes_V2" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magento_snippets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magento_snippets" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -113,10 +185,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ConfigurableTableByAttributes_V2/skin/frontend/base/default/js/brander" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/skin/frontend/base/default" />
       <recent name="$PROJECT_DIR$/app/design/frontend/base/default/template" />
       <recent name="$PROJECT_DIR$/app/etc/modules" />
-      <recent name="$PROJECT_DIR$/app/code/local/Brander" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ConfigurableTableByAttributes_V1" />
@@ -208,12 +281,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526575098889</updated>
-      <workItem from="1526575100308" duration="324000" />
+      <workItem from="1526575100308" duration="421000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="324000" />
+    <option name="totallyTimeSpent" value="421000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-4" width="1920" height="1084" extended-state="6" />
