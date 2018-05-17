@@ -24,25 +24,19 @@ class Brander_CheckoutCart_CartController extends Mage_Checkout_CartController
         $cart   = $this->_getCart();
         $params = $this->getRequest()->getParams();
 
-        $productSuperAttributes = [];
+        $productIds = [];
         foreach ($params as $key => $value) {
             if(stristr($key,'product-')) {
-                $qty = $this->_getProductQty($params, str_replace('product-', '', $key));
-                $productSuperAttributes[] = [
-                    'qty'              => $qty,
-                    'super_attribute'  => Mage::helper('core')->jsonDecode($value)
-                ];
+                $productIds[$value] = $this->_getProductQty($params, str_replace('product-', '', $key));
             }
         }
 
-        if(!count($productSuperAttributes)) {
+        if(!count($productIds)) {
             return parent::addAction();
         }
 
         try {
-            foreach ($productSuperAttributes as $superAttribute) {
-                $qty = $superAttribute['qty'];
-
+            foreach ($productIds as $productId => $qty) {
                 if($qty < 1) {
                     continue;
                 }
@@ -55,9 +49,9 @@ class Brander_CheckoutCart_CartController extends Mage_Checkout_CartController
                     $params['qty'] = $qty;
                 }
 
-                $params['super_attribute'] = $superAttribute['super_attribute'];
-
-                $product = $this->_initProduct();
+                $product = Mage::getModel('catalog/product')
+                    ->setStoreId(Mage::app()->getStore()->getId())
+                    ->load($productId);
 
                 $related = $this->getRequest()->getParam('related_product');
 
