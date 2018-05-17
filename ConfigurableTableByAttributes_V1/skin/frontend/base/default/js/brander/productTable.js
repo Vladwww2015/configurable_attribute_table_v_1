@@ -153,7 +153,7 @@ ProductTable.prototype = {
     },
 
     qtyItemSet: function(el, object){
-        var specialAttrId = document.querySelectorAll('.general-table-row.active');
+        var specialAttr = document.querySelectorAll('.general-table-row.active');
         var child = document.querySelectorAll('.child-table-row.active');
 
         var childId = null;
@@ -161,7 +161,7 @@ ProductTable.prototype = {
             childId = child[0].id;
         }
 
-        var productId = object.getProductId(object, specialAttrId[0].id, childId);
+        var productId = object.getProductId(object, specialAttr[0].id, childId);
         var inputQtyValue = document.querySelectorAll('[name="' + productId[0] + '-' + el.srcElement.dataset.id +'"]');
 
         if(inputQtyValue.length < 1) {
@@ -244,10 +244,10 @@ ProductTable.prototype = {
                     object._removeClassElement(elements[i], 'active');
                 }
 
-                var specialAttrId = document.querySelectorAll('.' + object.generalClass + '.active');
+                var specialAttr = document.querySelectorAll('.' + object.generalClass + '.active');
 
-                if(specialAttrId.length > 0) {
-                    object._addProductByChildAttribute(object, el, specialAttrId, '[data-id="product-values"]');
+                if(specialAttr.length > 0) {
+                    object._addProductByChildAttribute(object, el, specialAttr[0], '[data-id="product-values"]');
                 }
                 return;
             }
@@ -266,10 +266,10 @@ ProductTable.prototype = {
         }
     },
 
-    _addProductByChildAttribute: function (object, el, specialAttrId, divSelector) {
+    _addProductByChildAttribute: function (object, el, specialAttr, divSelector) {
 
-        var inputQty = document.querySelectorAll('input[data-id=' + specialAttrId[0].dataset.id + ']');
-        var productId = object.getProductId(object, specialAttrId[0].id, el.toElement.id);
+        var inputQty = document.querySelectorAll('input[data-id=' + specialAttr.dataset.id + ']');
+        var productId = object.getProductId(object, specialAttr.id, el.toElement.id);
         var selector = '[data-class="' + object.inputQty + '"]';
 
         el.toElement.classList.add('active');
@@ -285,8 +285,17 @@ ProductTable.prototype = {
             inputQty = object._setInputQtyValue(inputQty, inputQtyValue);
 
             var input = document.querySelectorAll('[name="product-' + productId + '-' + inputQty.dataset.id + '"');
+            console.log(specialAttr);
+            var data = {
+                el:          el.toElement,
+                input:       input,
+                inputQty:    inputQty,
+                productId:   productId,
+                specialAttr: specialAttr,
+                divSelector: divSelector
+            };
             if(input.length < 1) {
-                object._addProductInput(input, productId, divSelector, inputQty);
+                object._addProductInput(data);
             }
         }
     },
@@ -313,7 +322,14 @@ ProductTable.prototype = {
 
             var input = document.querySelectorAll('[name="product-' + productId + '-' + inputQty.dataset.id + '"');
             if(input.length < 1) {
-                object._addProductInput(input, productId, divSelector, inputQty);
+                var data = {
+                    el:          el.toElement,
+                    input:       input,
+                    inputQty:    inputQty,
+                    productId:   productId,
+                    divSelector: divSelector
+                };
+                object._addProductInput(data);
             }
 
         }
@@ -321,13 +337,22 @@ ProductTable.prototype = {
         inputQty.removeAttribute('readonly');
     },
 
-    _addProductInput: function(input, productId, divSelector, inputQty) {
+    _addProductInput: function(data) {
         input = document.createElement('input');
-        input.name = 'product-' + productId + '-' + inputQty.dataset.id;
+        input.name = 'product-' + data.productId + '-' + data.inputQty.dataset.id;
         input.type = 'hidden';
-        input.value = productId;
+        var value = {};
+        var elId = data.el.parentElement.attributeId;
+        value[elId] = data.el.id;
 
-        var productDiv = document.querySelectorAll(divSelector);
+        if(data.specialAttr) {
+            var specialAttrId = data.specialAttr.parentElement.attributeId;
+            value[specialAttrId] = data.specialAttr.id;
+        }
+
+        input.value = JSON.stringify(value);
+
+        var productDiv = document.querySelectorAll(data.divSelector);
         productDiv[0].appendChild(input);
     },
 
